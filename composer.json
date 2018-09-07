@@ -9,7 +9,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "spatie/laravel-server-monitor": "^1.4"
+        "spatie/laravel-server-monitor": "^1.4",
+        "spatie/laravel-uptime-monitor": "^3.3"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
