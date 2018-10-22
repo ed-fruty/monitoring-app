@@ -12,6 +12,7 @@ return [
         'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
         'memcached' => Spatie\ServerMonitor\CheckDefinitions\Memcached::class,
         'mysql' => Spatie\ServerMonitor\CheckDefinitions\MySql::class,
+        'mysql:replication' => \App\CheckDefinitions\Mysql\MysqlReplication::class,
         'memcached:process' => \App\CheckDefinitions\Memcached\MemcachedProcess::class,
         'mongo:process' => \App\CheckDefinitions\Mongo\MongoProcess::class,
         'rabbit-mq:process' => \App\CheckDefinitions\RabbitMQ\RabbitMQProcess::class,

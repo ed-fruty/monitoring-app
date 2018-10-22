@@ -108,7 +108,14 @@ class SyncFileWithCustomProperties extends SyncFile
         }
 
         if (\is_array($checkType) && \count($checkType) === 1) {
-            return (string) collect($checkType)->keys()->first();
+
+            $collection = collect($checkType);
+            $firstKey = $collection->keys()->first();
+            $firstValue = $collection->values()->first();
+
+            return (string) (\is_numeric($firstKey) && \is_string($firstValue))
+                ?  $firstValue
+                :  $firstKey;
         }
 
         throw new \InvalidArgumentException('Invalid check type was detected.');
